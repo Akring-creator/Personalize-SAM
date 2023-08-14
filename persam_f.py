@@ -47,7 +47,7 @@ def main():
         os.mkdir('./outputs/')
     
     for obj_name in os.listdir(images_path):
-        if ".DS" not in obj_name:
+        if ".DS" or ".ipynb_checkpoints" not in obj_name:
             persam_f(args, obj_name, images_path, masks_path, output_path)
 
 
